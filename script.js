@@ -100,7 +100,10 @@ function renderCircles() {
         context.fillStyle = b.color;
         context.beginPath();
         for(let i=1;i<6;i++){
-            context.arc(b.x+(b.r*i*b.vx), b.y+(b.r*i*b.vy), b.r, 0, Math.PI * 2, false);
+            if((b.r-i)>0){
+                context.arc(b.x-(b.r*i*b.vx), b.y-(b.r*i*b.vy), (b.r-i), 0, Math.PI * 2, false);
+            }
+            
         }
         // context.ellipse(b.x, b.y, b.xr, b.yr, b.angle, 0, 2 * Math.PI);
 
