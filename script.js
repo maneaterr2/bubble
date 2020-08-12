@@ -61,7 +61,7 @@ class Circle {
 
     // this.xr = 6 + 10 * Math.random();
     // this.yr = 2 + 10 * Math.random();
-    this.r = getRandomArbitrary(10,20)
+    this.r = getRandomArbitrary(5,20)
 
     this.color = colorPallete[Math.floor(Math.random() * colorPallete.length)];
   }
@@ -90,7 +90,7 @@ function removeCircles() {
 function renderCircles() {
   context.clearRect(0, 0, width, height);
 
-  if (Math.random() > .2)
+  if (Math.random() > .7)
     circles.push(new Circle());
 
   for (var i = 0; i < circles.length; i++) {
