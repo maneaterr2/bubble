@@ -61,7 +61,7 @@ class Circle {
 
     // this.xr = 6 + 10 * Math.random();
     // this.yr = 2 + 10 * Math.random();
-    this.r = getRandomArbitrary(5,20)
+    this.r = getRandomArbitrary(5,21)
 
     this.color = colorPallete[Math.floor(Math.random() * colorPallete.length)];
   }
@@ -99,9 +99,11 @@ function renderCircles() {
     if(b.r>0){
         context.fillStyle = b.color;
         context.beginPath();
-        for(let i=1;i<6;i++){
-            if((b.r-i)>0){
-                context.arc(b.x-(b.r*i*b.vx), b.y-(b.r*i*b.vy), (b.r-i), 0, Math.PI * 2, false);
+        for(let i=1;i<8;i++){
+            let k = i+2;
+            let z = i*0.7;
+            if((b.r-k)>0){
+                context.arc(b.x-(b.r*z*b.vx), b.y-(b.r*z*b.vy), (b.r-k), 0, Math.PI * 2, false);
             }
             
         }
